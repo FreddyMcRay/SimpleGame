@@ -32,6 +32,7 @@ namespace SimpleGame
                     else
                         Console.WriteLine(
                             $"You win! Comp hero is: {compHero.Name}. The secret key is: {_key}");
+                    Console.WriteLine("You can check values on freeformatter.com");
                 }
                 catch (Exception e)
                 {
