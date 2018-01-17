@@ -27,11 +27,20 @@ namespace SimpleGame
                 try
                 {
                     if (_heroes[Convert.ToInt32(playerChoise) - 1].Rules.Contains(compHero.Name))
+                    {
                         Console.WriteLine(
                             $"You lose! Comp hero is: {compHero.Name}. The secret key is: {_key}");
+                    }
                     else
+                    {
+                        if (_heroes[Convert.ToInt32(playerChoise) - 1].Name.Equals(compHero.Name))
+                        {
+                            Console.WriteLine(
+                                $"Standoff! Comp hero is: {compHero.Name}. The secret key is: {_key}");
+                        }
                         Console.WriteLine(
                             $"You win! Comp hero is: {compHero.Name}. The secret key is: {_key}");
+                    }
                     Console.WriteLine("You can check values on freeformatter.com");
                 }
                 catch (Exception e)
